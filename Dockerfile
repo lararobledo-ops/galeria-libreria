@@ -16,7 +16,6 @@ RUN cp .env.example .env
 
 # Instalar dependencias y permisos
 RUN composer install --no-dev --optimize-autoloader \
- && php artisan migrate --force \
  && chmod -R 775 storage bootstrap/cache
 
 EXPOSE 10000
